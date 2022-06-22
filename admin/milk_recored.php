@@ -116,23 +116,7 @@ include('../connect.php');
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="col-sm-4 control-label">Delivery of:</label>
-                            <div class="col-sm-8">
-                                <select name="delivery" id="delivery" class="form-control-static">
-                                    <option value="0">All</option>
-                                    <?php
-                                    $sql6 ="SELECT * from login";
-                                    $query6 = $link -> prepare($sql6);
-                                    $query6->execute();
-                                    $results6=$query6->fetchAll(PDO::FETCH_OBJ);
-                                    if($query6->rowCount() > 0)
-                                        foreach($results6 as $result)
-                                            echo "<option value='$result->username'>".$result->username."</option>";
-                                    ?>
-                                </select>
-                            </div>
-                        </div>
+                     
                             <div class="col-sm-8">
                         <input type="submit" class="form-control-static" name="submit" id="submit" value=" Submit ">
                             </div>
